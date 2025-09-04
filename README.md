@@ -7,7 +7,7 @@ The tools can process sequences provided manually, read from files, or be genera
 
 ## Features
 
-### 🔹 Sequence Complement Tool
+### Sequence Complement Tool
 Generates the **complementary sequence** for a given DNA sequence.
 
 - **Input**: A single nucleotide sequence (`A, C, G, T`).
