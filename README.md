@@ -1,65 +1,80 @@
-This project is a suite of Ruby scripts for bioinformatic sequence analysis, including DNA complement generation and protein sequence alignment. The tools can process sequences provided by the user, read from files, or generated randomly.
+# Bioinformatic Sequence Analysis Suite (Ruby)
 
-Features
-Sequence Complement Tool
-This tool generates the complementary sequence for a given DNA sequence.
+This project is a suite of Ruby scripts for **bioinformatic sequence analysis**, including tools for **DNA complement generation** and **protein sequence alignment**.  
+The tools can process sequences provided manually, read from files, or be generated randomly.
 
-Input: A single nucleotide sequence (A, C, G, T).
+---
 
-Input Methods:
+## Features
 
-Manual Typing: Enter the sequence directly.
+### 🔹 Sequence Complement Tool
+Generates the **complementary sequence** for a given DNA sequence.
 
-File Upload: Read the sequence from a .fasta or .txt file. The file format requires the sequence to start with a > followed by the sequence on a new line.
+- **Input**: A single nucleotide sequence (`A, C, G, T`).
+- **Input Methods**:
+  - **Manual Typing**: Enter the sequence directly in the terminal.
+  - **File Upload**: Load a `.fasta` or `.txt` file.  
+    Format requirement: the first line starts with `>`, followed by the sequence on a new line.
+  - **Random Generation**: Generate a random nucleotide sequence with a defined length range.
+- **Output**: The complementary DNA sequence.
 
-Random Generation: Generate a random nucleotide sequence with a specified minimum and maximum length.
+---
 
-Output: The complementary DNA sequence.
+### Sequence Alignment Tool
+Performs a **local alignment** of two or more amino acid sequences and calculates their **identity score**.  
+The program identifies the **best-aligned pair** among all possible combinations.
 
-Sequence Alignment Tool
-This tool performs a local alignment of two or more amino acid sequences and calculates their identity score. The program identifies the pair of sequences with the highest identity score among all combinations.
+- **Input**: Two or more amino acid sequences.
+- **Input Methods**:
+  - **Manual Typing**: Enter sequences directly.
+  - **File Upload**: Load sequences from a `.fasta`/`.txt` file or from multiple files in a folder.  
+    Each sequence must begin with `>`.
+  - **Random Generation**: Generate a specified number of random amino acid sequences with a user-defined length range.
+- **Alignment Parameters**: User must provide insertion and extension scores for the alignment algorithm.
+- **Output**:
+  - **Identity Score**: Numeric value of the alignment score.
+  - **Identity Percentage**: Proportion of identical residues.
+  - **Alignment Display**: Visual representation with matches, mismatches, and gaps.
+  - **Dot Matrix**: Graphical matrix showing identical residues between sequences.
+  - **Matches & Mismatches**: Count of aligned residues.
 
-Input: Two or more amino acid sequences.
+---
 
-Input Methods:
+## Technical Details
 
-Manual Typing: Enter sequences directly.
+The project is implemented in **Ruby** and structured into the following components:
 
-File Upload: Read sequences from a .fasta or .txt file, or from multiple files within a folder. Each sequence in the file must begin with a >.
+- **`sangiorgio.rb`**: Main executable providing a CLI for selecting and running tools.
+- **`funzioni_sangiorgio.rb`**: Utility functions for validation, file handling, scoring, and visualization.
+- **`classi_sangiorgio.rb`**: Custom classes:
+  - `Sequence` – sequence management
+  - `Matrix` – general matrix handling
+  - `SubstitutionMatrix` – amino acid scoring
+  - `AlignmentMatrix` – alignment computations
+- **`sm.txt`**: Example substitution matrix used in protein alignment (required for scoring).
 
-Random Generation: Generate a specified number of random amino acid sequences with a defined length range.
+---
 
-Alignment Parameters: The user must provide a score for insertions and extensions for the alignment algorithm.
+## How to Run
 
-Output: The detailed analysis of the best-aligned sequence pair includes:
+1. **Clone the repository**:
+   ```bash
+   git clone <repository_url>
+   cd <repository_name>
+---
 
-Identity Score: The calculated score for the optimal alignment.
+2. **Ensure Ruby is installed**:
+      ```bash
+   ruby -v
 
-Identity Percentage: The percentage of identical characters in the alignment.
+---
 
-Alignment Display: A visual representation of the local alignment, showing matches, mismatches, and gaps.
+3. **Run the main script**:
+    ```bash
+   
+    ruby sangiorgio.rb
 
-Dot Matrix: A matrix displaying the locations of identical amino acids between the two sequences.
+---
 
-Matches & Mismatches: A count of the number of matches and mismatches in the final alignment.
 
-Technical Details
-The project is built using Ruby and is structured into three main files:
 
-sangiorgio.rb: The main executable file that provides a command-line interface for the user to select and run different tools.
-
-funzioni_sangiorgio.rb: Contains a collection of functions for sequence validation, file handling, score calculation, and alignment display.
-
-classi_sangiorgio.rb: Defines custom classes for managing sequences (Sequence), matrices (Matrix), substitution matrices (SubstitutionMatrix), and alignment matrices (AlignmentMatrix).
-
-sm.txt: A sample substitution matrix used for amino acid scoring. This file is critical for the alignment function.
-
-How to Run
-Clone the repository.
-
-Make sure you have Ruby installed on your system.
-
-Execute the main script from your terminal:
-
-Bash ruby sangiorgio.rb
-Follow the on-screen prompts to choose an operation and provide your input.
