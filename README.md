@@ -1,7 +1,14 @@
 # Bioinformatic Sequence Analysis tool (Ruby)
 
-This project is a suite of Ruby scripts for **bioinformatic sequence analysis**, including tools for **DNA complement generation** and **protein sequence alignment**.  
-The tools can process sequences provided manually, read from files, or be generated randomly.
+Developed an interactive tool in Ruby for DNA sequence analysis,
+enabling users to either input, load, or randomly generate sequences.
+The program allows the creation of complementary strands and the
+execution of pairwise or multiple sequence alignments. Among aligned
+sequences, the two with the highest score can be further analyzed by
+substituting amino acids to recalculate identity, generating dot plots,
+visualizing scoring matrices with optimal paths, and computing the
+number of matches, mismatches, and gaps. The system is menu-driven,
+allowing continuous exploration until the user chooses to exit.
 
 ---
 
