@@ -1,4 +1,4 @@
-# Bioinformatic Sequence Analysis Suite (Ruby)
+# Bioinformatic Sequence Analysis tool (Ruby)
 
 This project is a suite of Ruby scripts for **bioinformatic sequence analysis**, including tools for **DNA complement generation** and **protein sequence alignment**.  
 The tools can process sequences provided manually, read from files, or be generated randomly.
