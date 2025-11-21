@@ -1,9 +1,6 @@
 NUCLEOTIDES = ["A", "C", "G", "T"]
 AA = ["A", "C", "D", "E", "F", "G", "H", "I", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "Y"]
 
-####################################
-######     Nuove funzioni     ######
-####################################
 
 # Counts the number of matches and mismatches between s1 and s2.
 # Return an array [matches, mismatches]
@@ -116,10 +113,6 @@ def identity_score(seq_1, seq_2, insertion, extention)
     end
     score
 end
-
-#########################################
-####   Funzioni definite a lezione   ####
-#########################################
 
 def stampa_allineamento(s1, s2)
     s = s1.join + "\n"
