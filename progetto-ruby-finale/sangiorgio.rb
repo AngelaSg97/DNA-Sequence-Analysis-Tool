@@ -1,17 +1,21 @@
 =begin
-SCOPO:
-Il progetto si concentra sulla generazione di una sequenza complementare e sull'allineamento di sequenze con calcolo del
-punteggio di identità.
+OBJECTIVE:
+The project focuses on the generation of a complementary sequence and the alignment of sequences with identity score calculation.
 
-OPERAZIONI:
-Il tool ha la capacità di elaborare sequenze di vario tipo, che possono essere fornite in input tramite un file,
-digitate da tastiera oppure generate casualmente.
-- caso complemento : l'utente darà in input una sequenza di nucleotidi e verrà generato il complemento di quella sequenza
-- caso allineamento : l'utente darà in input due (o più) sequenze aminoacidiche che verranno elaborate per
-                      1. stampare l'allineamento
-                      2. stampare la matrice di punti
-                      3. stampare il numero di matches e mismatches
-                      tutto questo dopo che è stato calcolato il punteggio di identità tra le due sequenze con punteggio più alto.
+OPERATIONS:
+The tool has the capability to process sequences of various types, which can be provided as input via a file, typed from the keyboard, or randomly generated.
+
+  -Complement Case: The user will input a nucleotide sequence, and the complement of that sequence will be generated.
+  
+  -Alignment Case: The user will input two (or more) amino acid sequences which will be processed to:
+
+        -Print the alignment.
+        
+        -Print the score matrix (or dot plot/matrix).
+        
+        -Print the number of matches and mismatches.
+
+All of this will be done after the identity score between the two highest-scoring sequences has been calculated.
 
 =end
 
