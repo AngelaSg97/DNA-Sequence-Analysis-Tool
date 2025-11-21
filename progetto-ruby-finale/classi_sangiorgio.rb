@@ -1,6 +1,4 @@
-####################################
-#######     Nuova classe     #######
-####################################
+
 
 class Sequence
     NUCLEOTIDES = ["A", "C", "G", "T"]
@@ -68,9 +66,6 @@ class Sequence
     end
 end
 
-###################################
-###  Classi definite a lezione  ###
-###################################
 
 class Matrix
     def initialize(m)
